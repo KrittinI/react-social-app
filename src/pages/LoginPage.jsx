@@ -1,6 +1,13 @@
+import { Link } from "react-router-dom"
 function LoginPage() {
     return (
-        <div>LoginPage</div>
+        <div>
+            <h1>
+                LoginPage
+            </h1>
+            <Link to="/">HomePage</Link   >
+            <Link to="/profile">ProfilePage</Link >
+        </div>
     )
 }
 
