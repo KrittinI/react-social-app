@@ -2,7 +2,7 @@ import { AppBar as MuiAppBar, Box, IconButton, Avatar, Toolbar, Typography, Menu
 import MenuIcon from '@mui/icons-material/Menu'
 import { useState, useContext } from "react";
 import { AuthContext } from '../context/AuthContext'
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom"
 
 export default function AppBar() {
     const { logout } = useContext(AuthContext)
@@ -21,6 +21,10 @@ export default function AppBar() {
     const handleLogout = () => {
         logout();
         navigate('/login')
+    }
+
+    const handleClickToProfile = () => {
+        navigate('/profile')
     }
 
     return (
@@ -55,7 +59,7 @@ export default function AppBar() {
                         open={open}
                         onClose={handleClose}
                     >
-                        <MenuItem>Profile</MenuItem>
+                        <MenuItem onClick={handleClickToProfile}>Profile</MenuItem>
                         <MenuItem onClick={handleLogout}>Logout</MenuItem>
                     </Menu>
 

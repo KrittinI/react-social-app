@@ -25,5 +25,5 @@ export default function PostContextProvider({ children }) {
 
 
 
-    return <PostContext.Provider value={{ posts: posts }}>{children}</PostContext.Provider>
+    return <PostContext.Provider value={{ posts }}>{children}</PostContext.Provider>
 }
