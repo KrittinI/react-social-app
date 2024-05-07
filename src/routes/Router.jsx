@@ -1,4 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import HomePage from "../pages/HomePage"
+import LoginPage from "../pages/LoginPage"
+import ProfilePage from "../pages/ProfilePage"
+import NotFoundPage from "../pages/NotFoundPage"
 
 // CreateBrowserRouter : FN
 // RouterProvider : Component
@@ -7,25 +11,25 @@ const router = createBrowserRouter([
     {
         path: "/",
         element: (
-            <h1>Hi</h1>
+            <HomePage />
         )
     },
     {
         path: "/login",
         element: (
-            <h1>Login</h1>
+            <LoginPage />
         )
     },
     {
         path: "/profile",
         element: (
-            <h1>Profile</h1>
+            <ProfilePage />
         )
     },
     {
         path: "*",
         element: (
-            <h1>404 Not Foun</h1>
+            <NotFoundPage />
         )
     },
 ])
