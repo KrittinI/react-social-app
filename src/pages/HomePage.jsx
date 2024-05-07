@@ -1,8 +1,10 @@
 import { Link, useNavigate } from "react-router-dom"
+import { Button } from "@mui/material";
+import DeleteIcon from '@mui/icons-material/Delete';
 // Link : Component
 
 function HomePage() {
-    // useNavigate : return Funtion
+    // useNavigate : Hook => return Funtion for navigate
     const navigate = useNavigate();
 
     const handleClick = () => {
@@ -20,7 +22,7 @@ function HomePage() {
             </h1>
             <Link to="/login">LoginPage</Link   >
             <Link to="/profile">ProfilePage</Link >
-            <button onClick={handleClick}>Go to 404</button>
+            <Button variant='contained' onClick={handleClick} startIcon={<DeleteIcon />}>Go to 404</Button>
         </div>
     )
 }
