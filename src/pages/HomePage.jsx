@@ -22,8 +22,16 @@ function HomePage() {
             </h1>
             <Link to="/login">LoginPage</Link   >
             <Link to="/profile">ProfilePage</Link >
-            <Button variant='contained' onClick={handleClick} startIcon={<DeleteIcon />}>Go to 404</Button>
-        </div>
+            <Button variant='contained' onClick={handleClick} startIcon={<DeleteIcon />}
+                sx={{
+                    padding: "16px",
+                    color: "black",
+                    "&:hover": {
+                        color: "white"
+                    }
+                }}
+            >Go to 404</Button>
+        </div >
     )
 }
 
